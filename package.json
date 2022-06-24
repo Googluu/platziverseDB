@@ -1,0 +1,19 @@
+{
+  "name": "platziverse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard --fix"
+  },
+  "author": "Sneyder J.H Rodríguez <sneyder.h.rodriguez@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.0"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0"
+  }
+}
