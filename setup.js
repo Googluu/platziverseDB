@@ -8,6 +8,7 @@ const db = require('./index')
 const prompt = inquirer.createPromptModule()
 
 async function setup () {
+  if(!process.argv.includes('--y')) {
   const answer = await prompt([
     {
       type: 'confirm',
@@ -15,10 +16,11 @@ async function setup () {
       message: 'This will destroy your database, are you sure?'
     }
   ])
-
   if (!answer.setup) {
     return console.log('Nothing happend :)')
   }
+}
+
 
   const config = {
     database: process.env.DB_NAME || 'platziverse',
