@@ -1,13 +1,40 @@
-# PlatziVerse DB
+# platziverse-mqtt
 
-## Usage
+## `agent/connected`
 
 ``` js
-const setupDatabase = require('platziverse-db')
+{
+  agent: {
+    uuid, // auto generar
+    username, // definir por configuración
+    name, // definir por configuración
+    hostname, // obtener del sistema operativo
+    pid // obtener del proceso
+  }
+}
+```
 
-setupDabase(config).then(db => {
-    const { Agent, Metric } = db
+## `agent/disconnected`
 
-}).catch(err => console.error(err));
+``` js
+{
+  agent: {
+    uuid
+  }
+}
+```
 
+## `agent/message`
+
+``` js
+{
+  agent,
+  metrics: [
+    {
+      type,
+      value
+    }
+  ],
+  timestamp // generar cuando creamos el mensaje
+}
 ```
