@@ -1,0 +1,29 @@
+{
+  "name": "platziverse-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A simple IoT Platform - Agent",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Googluu/platziverseDB.git"
+  },
+  "author": "Sneyder J.H Rodríguez <sneyder.h.rodriguez@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Googluu/platziverseDB/issues"
+  },
+  "homepage": "https://github.com/Googluu/platziverseDB#readme",
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "dependencies": {
+    "debug": "^4.3.4",
+    "defaults": "^1.0.3",
+    "mqtt": "^4.3.7",
+    "uuid": "^8.3.2"
+  }
+}
