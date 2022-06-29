@@ -1,0 +1,32 @@
+{
+  "name": "platziverse-web",
+  "version": "1.0.0",
+  "description": "A Simple IoT Platform - Web",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server.js",
+    "start-dev": "cross-env DEBUG=platziverse:* nodemon server.js",
+    "lint": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Googluu/platziverseDB.git"
+  },
+  "author": "Sneyder J.H Rodríguez <sneyder.h.rodriguez@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Googluu/platziverseDB/issues"
+  },
+  "homepage": "https://github.com/Googluu/platziverseDB#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.18",
+    "standard": "^17.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "cross-env": "^7.0.3",
+    "debug": "^4.3.4",
+    "express": "^4.18.1",
+    "socket.io": "^4.5.1"
+  }
+}
