@@ -28,11 +28,22 @@ function handleFatalError (err) {
   process.exit(1)
 }
 
-process.on('uncaughtException', handleFatalError)
-process.on('unhandledRejection', handleFatalError)
+if (!module.parent) {
+  process.on('uncaughtException', handleFatalError)
+  process.on('unhandledRejection', handleFatalError)
 
-app.listen(port, () => {
+ app.listen(port, () => {
   console.log('Api escuchando en el puerto ', `${port}`)
 })
+}
 
 module.exports = app
+
+// process.on('uncaughtException', handleFatalError)
+// process.on('unhandledRejection', handleFatalError)
+
+// app.listen(port, () => {
+//   console.log('Api escuchando en el puerto ', `${port}`)
+// })
+
+// module.exports = app
